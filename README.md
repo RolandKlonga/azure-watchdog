@@ -69,7 +69,7 @@ Query the last 24 hours of connectivity events:
 ```kql
 IronBridgeNetMon_CL
 | where TimeGenerated > ago(24h)
-| project TimeGenerated, Status, Details, Server
+| project TimeGenerated, Status_s, Details_s, Server_s
 | order by TimeGenerated desc
 ```
 
@@ -77,8 +77,8 @@ View all outage events:
 
 ```kql
 IronBridgeNetMon_CL
-| where Status == "Outage"
-| project TimeGenerated, Details, Server
+| where Status_s == "Outage"
+| project TimeGenerated, Details_s, Server_s
 | order by TimeGenerated desc
 ```
 
