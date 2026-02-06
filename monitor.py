@@ -1,10 +1,9 @@
 import os
 import time
 import datetime
-import requests  # <--- This is the library you just verified
+import requests 
 
 # --- CONFIGURATION ---
-# PASTE YOUR NEW DISCORD URL INSIDE THE QUOTES BELOW:
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK", "ChangeMe")
 
 def check_internet():
